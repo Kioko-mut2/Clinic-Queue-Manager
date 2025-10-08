@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pricing - Clinic Queue Manager</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+<body>
+  <header>
+    <nav>
+    
+      <button id="menu-toggle">&#9776;</button>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="features.html">Features</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h1>Choose Your Plan & Pay</h1>
+      <div class="plans">
+        <div class="plan-card">
+          <h2>Basic</h2>
+          <p>Queue registration, dashboard</p>
+          <p class="price">$49/month</p>
+          <div id="paymentPrompt" class="success"></div>
+          <button class="pay-btn" data-plan="Basic">Pay with M-Pesa</button>
+          <button class="pay-btn" data-plan="Basic" data-method="card">Pay with Card</button>
+        </div>
+        <div class="plan-card">
+          <h2>Pro</h2>
+          <p>All Basic + notifications, analytics</p>
+          <p class="price">$99/month</p>
+          <button class="pay-btn" data-plan="Pro">Pay with M-Pesa</button>
+          <button class="pay-btn" data-plan="Pro" data-method="card">Pay with Card</button>
+        </div>
+        <div class="plan-card">
+          <h2>Enterprise</h2>
+          <p>All Pro + custom integrations</p>
+          <p class="price">Contact Us</p>
+          <button class="pay-btn" data-plan="Enterprise">Request Quote</button>
+        </div>
+      </div>
+      <div class="payment-info">
+        <p>For direct payment, use M-Pesa Paybill: <strong>123456</strong>, Account: <strong>ClinicQueue</strong></p>
+      </div>
+    </section>
+    <section>
+      <h2>Benefits of Our Service</h2>
+      <div class="benefit-list">
+        <div>
+          <img src="https://cdn-icons-png.flaticon.com/512/2921/2921822.png" alt="Queue Icon" class="icon">
+          <h3>Reduce Overcrowding</h3>
+          <p>Digital queue numbers and notifications keep waiting areas clear.</p>
+        </div>
+        <!-- ...other benefits... -->
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Clinic Queue Manager. All rights reserved.</p>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="features.html">Features</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="social">
+      <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter" style="width:32px;"></a>
+      <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733561.png" alt="LinkedIn" style="width:32px;"></a>
+    </div>
+  </footer>
+</body>
+</html>

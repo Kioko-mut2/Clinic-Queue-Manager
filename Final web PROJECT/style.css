@@ -1,0 +1,283 @@
+/* Reset & base styles */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: url('background.avif') no-repeat center center fixed;
+  background-size: cover;
+  color: #000201; /* Make all text white for contrast */
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Add a dark overlay for readability */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 40, 60, 0.65); /* dark blue overlay */
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Make sure headings and links are also white */
+h1, h2, h3, h4, h5, h6, p, li, a {
+  color: #fff !important;
+  text-shadow: 0 2px 8px #000a;
+}
+
+header, footer, nav, main, .benefit-list div, .plan-card, .features, .about, .contact, .pricing {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+nav { display: flex; align-items: center; justify-content: space-between; padding: 1em 2em; position: relative; }
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2em;
+  margin: 0;
+  padding: 0;
+}
+nav ul li a {
+  color: #fff;
+  font-weight: 500;
+  padding: 0.5em 1em;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+nav ul li a:hover, nav ul li a.active {
+  background: #eaf6fb;
+  color: #2ca58d;
+}
+#menu-toggle { display: none; background: none; border: none; color: #fff; font-size: 2em; cursor: pointer; }
+
+main {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px #2ca58d22;
+  padding: 2em;
+  max-width: 900px;
+  margin: 2em auto;
+}
+
+.hero {
+  text-align: center;
+  
+  padding: 2em 0;
+  animation: fadeIn 1.2s;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(40px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+.cta-btn {
+  background: #2ca58d;
+  color: #fff;
+  padding: 0.8em 2em;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.2s;
+  display: inline-block;
+  margin-top: 1em;
+}
+.cta-btn:hover {
+  background: #1e307e;
+}
+
+.benefits { margin-top: 2em; }
+.benefit-list {
+  display: flex;
+  gap: 2em;
+  justify-content: space-between;
+}
+.benefit-list div,
+.plan-card {
+  background: #f6fff8; /* Gentle greenish white */
+  border: 1px solid #c6b2f7;
+  padding: 1em;
+  border-radius: 6px;
+  flex: 1;
+}
+.benefit-list div {
+  background: #f6fff8;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px #2ca58d22;
+  padding: 1em;
+  text-align: center;
+  margin: 1em 0;
+  transition: transform 0.2s;
+}
+.benefit-list div:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 16px #2ca58d44;
+}
+
+.about .team { display: flex; gap: 2em; margin-top: 1em; }
+.about .team div { text-align: center; }
+.about .team img { width: 200px; border-radius: 100%; margin-bottom: 0.5em; }
+
+.features ul, .features ol { margin: 1em 0 1em 2em; }
+.demo-img { width: 100%; max-width: 400px; display: block; margin: 2em auto; border-radius: 8px; box-shadow: 0 2px 8px #0002; }
+
+.pricing table { width: 100%; border-collapse: collapse; margin: 2em 0; }
+.pricing th, .pricing td { border: 1px solid #ddd; padding: 1em; text-align: left; }
+.pricing th { background: #e6f7f4; }
+.plan-card .price {
+  color: #2ca58d;
+}
+.faq h3 { margin-top: 1em; }
+
+.contact form { max-width: 400px; margin: 2em auto; display: flex; flex-direction: column; gap: 1em; }
+.contact label { font-weight: 500; }
+.contact input, .contact textarea { padding: 0.7em; border: 1px solid #ccc; border-radius: 4px; }
+.contact button {
+  background: #2ca58d;
+  color: #fff;
+  border: none;
+  padding: 0.8em;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.contact button:hover {
+  background: #1e7e6a;
+}
+.error { color: #d00; font-size: 0.9em; }
+.success {
+  color: #1e7e6a;
+  font-size: 1em;
+}
+
+footer { text-align: center; padding: 1.5em 0; }
+footer ul { list-style: none; display: flex; gap: 1em; justify-content: center; margin-top: 0.5em; }
+footer ul li a { color: #40008a; text-decoration: none; font-size: 0.95em; }
+
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 2em 0;
+}
+.feature-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1em;
+  background: #f6f6ff;
+  border-radius: 6px;
+  padding: 0.7em 1em;
+  box-shadow: 0 1px 4px #2ca58d11;
+}
+.icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 0.5em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.testimonials {
+  margin-top: 2em;
+  background: #eaf6fb;
+  padding: 1.5em;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px #2ca58d22;
+}
+.testimonials h2 {
+  margin-bottom: 0.5em;
+}
+.testimonials blockquote {
+  font-style: italic;
+  color: #234567;
+  margin: 0;
+}
+.testimonials span {
+  display: block;
+  margin-top: 0.5em;
+  font-weight: bold;
+  color: #2ca58d;
+}
+
+/* Headings blue */
+h1, h2, h3, h4, h5, h6 {
+  color: #1ca058 !important; /* Vivid hospital green */
+}
+
+/* Make the logo stand out with a white circle and green border */
+.logo {
+  background: #fff;
+  border-radius: 50%;
+  padding: 24px;
+  box-shadow: 0 4px 32px #0004;
+  border: 4px solid #1ca058;
+  filter: none;
+}
+
+.solved-list, .why-us {
+  margin: 1em 0 2em 2em;
+  list-style: disc;
+  color: #234567;
+}
+.comments blockquote {
+  background: #eaf6fb;
+  border-left: 4px solid #2ca58d;
+  margin: 1em 0;
+  padding: 1em 1.5em;
+  border-radius: 8px;
+  font-style: italic;
+  color: #234567;
+}
+.comments span {
+  display: block;
+  margin-top: 0.5em;
+  font-weight: bold;
+  color: #2ca58d;
+}
+.team {
+  display: flex;
+  gap: 2em;
+  margin: 2em 0;
+  flex-wrap: wrap;
+}
+.team div {
+  text-align: center;
+  flex: 1 1 180px;
+}
+.team img {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  object-fit: cover;
+  margin-bottom: 0.5em;
+  box-shadow: 0 2px 8px #2ca58d22;
+}
+
+/* Sticky header and mobile nav */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #2ca58d;
+  box-shadow: 0 2px 8px #2ca58d22;
+}
+@media (max-width: 700px) {
+  nav ul {
+    flex-direction: column;
+    background: transparent;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    display: none;
+  }
+  nav ul.show {
+    display: flex;
+  }
+  #menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2em;
+    cursor: pointer;
+  }
+  .benefit-list, .about .team { flex-direction: column; gap: 1em; }
+  main { padding: 1em; }
+}
